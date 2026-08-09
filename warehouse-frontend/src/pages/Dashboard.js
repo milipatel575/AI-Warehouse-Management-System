@@ -40,7 +40,7 @@ const data = [
 /* GET PRODUCTS */
 const getProducts = async () => {
 try{
-const res = await axios.get("http://localhost:5000/api/products/all");
+const res = await axios.get("https://ai-warehouse-management-system.onrender.com/api/products/all");
 
 setProducts(res.data);
 setTotalProducts(res.data.length);
@@ -61,7 +61,7 @@ console.log(error);
 /* LOW STOCK */
 const getLowStock = async () => {
 try{
-const res = await axios.get("http://localhost:5000/api/products/low-stock");
+const res = await axios.get("https://ai-warehouse-management-system.onrender.com/api/products/low-stock");
 setLowStock(Array.isArray(res.data)?res.data:[]);
 }catch(error){
 console.log(error);

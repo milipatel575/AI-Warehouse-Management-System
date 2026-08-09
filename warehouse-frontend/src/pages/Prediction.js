@@ -21,12 +21,12 @@ window.location.href = "/dashboard";
 }, []);
 
 const getPredictions = async()=>{
-const res = await axios.get("http://localhost:5000/api/predictions");
+const res = await axios.get("https://ai-warehouse-management-system.onrender.com/api/predictions");
 setPredictions(res.data);
 };
 
 const generatePrediction = async()=>{
-const res = await axios.post("http://localhost:5000/api/predict");
+const res = await axios.post("https://ai-warehouse-management-system.onrender.com/api/predict");
 alert(res.data.message);
 getPredictions();
 };

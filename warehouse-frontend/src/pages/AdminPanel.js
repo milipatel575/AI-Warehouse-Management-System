@@ -21,17 +21,17 @@ window.location.href = "/dashboard";
 }, []);
 
 const getUsers = async ()=>{
-const res = await axios.get("http://localhost:5000/api/auth/users");
+const res = await axios.get("https://ai-warehouse-management-system.onrender.com/api/auth/users");
 setUsers(res.data);
 };
 
 const updateRole = async(id, role)=>{
-await axios.put(`http://localhost:5000/api/auth/update-role/${id}`,{role});
+await axios.put(`https://ai-warehouse-management-system.onrender.com/api/auth/update-role/${id}`,{role});
 getUsers();
 };
 
 const deleteUser = async(id)=>{
-await axios.delete(`http://localhost:5000/api/auth/delete-user/${id}`);
+await axios.delete(`https://ai-warehouse-management-system.onrender.com/api/auth/delete-user/${id}`);
 getUsers();
 };
 

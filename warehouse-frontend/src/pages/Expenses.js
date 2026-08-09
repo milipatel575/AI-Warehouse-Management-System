@@ -24,12 +24,12 @@ window.location.href = "/";
 }, []);
 
 const getProducts = async()=>{
-const res = await axios.get("http://localhost:5000/api/products/all");
+const res = await axios.get("https://ai-warehouse-management-system.onrender.com/api/products/all");
 setProducts(res.data);
 };
 
 const getExpenses = async()=>{
-const res = await axios.get("http://localhost:5000/api/expense/list");
+const res = await axios.get("https://ai-warehouse-management-system.onrender.com/api/expense/list");
 setExpenses(res.data);
 setTotalExpense(res.data.reduce((s,i)=>s+i.amount,0));
 };
@@ -37,7 +37,7 @@ setTotalExpense(res.data.reduce((s,i)=>s+i.amount,0));
 const addExpense = async(e)=>{
 e.preventDefault();
 
-await axios.post("http://localhost:5000/api/expense/add",{productName,amount,type,description});
+await axios.post("https://ai-warehouse-management-system.onrender.com/api/expense/add",{productName,amount,type,description});
 
 alert("✅ Added");
 setProductName(""); setAmount(""); setType(""); setDescription("");

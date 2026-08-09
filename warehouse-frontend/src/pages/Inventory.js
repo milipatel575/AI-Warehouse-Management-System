@@ -22,14 +22,14 @@ window.location.href = "/";
 
 
 const getHistory = async () => {
-  const res = await axios.get("http://localhost:5000/api/products/history");
+  const res = await axios.get("https://ai-warehouse-management-system.onrender.com/api/products/history");
   setHistory(res.data);
 };
 
 /* GET PRODUCTS */
 const getProducts = async () => {
 try {
-const res = await axios.get("http://localhost:5000/api/products/all");
+const res = await axios.get("https://ai-warehouse-management-system.onrender.com/api/products/all");
 setProducts(res.data);
 } catch (error) {
 console.log(error);
@@ -41,7 +41,7 @@ const addProduct = async (e) => {
 e.preventDefault();
 
 try {
-await axios.post("http://localhost:5000/api/products/add", {
+await axios.post("https://ai-warehouse-management-system.onrender.com/api/products/add", {
 name,
 quantity
 });
@@ -61,7 +61,7 @@ console.log(error);
 /* DELETE PRODUCT */
 const deleteProduct = async (id) => {
 try {
-await axios.delete(`http://localhost:5000/api/products/delete/${id}`);
+await axios.delete(`https://ai-warehouse-management-system.onrender.com/api/products/delete/${id}`);
 getProducts();
 } catch (error) {
 console.log(error);
@@ -71,7 +71,7 @@ console.log(error);
 /* UPDATE QUANTITY */
 const updateQuantity = async (id, newQty) => {
 try {
-await axios.put(`http://localhost:5000/api/products/update/${id}`, {
+await axios.put(`https://ai-warehouse-management-system.onrender.com/api/products/update/${id}`, {
 quantity: newQty
 });
 getProducts();
