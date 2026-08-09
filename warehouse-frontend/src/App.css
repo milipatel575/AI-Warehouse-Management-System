@@ -1,0 +1,26 @@
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#f4f6f8;
+margin:0;
+padding:0;
+}
+
+.navbar{
+background:#1f2937;
+padding:15px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+margin-right:20px;
+font-weight:bold;
+}
+
+.navbar a:hover{
+color:#38bdf8;
+}
+
+.container{
+padding:30px;
+}
