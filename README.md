@@ -152,10 +152,10 @@ The project combines a React.js frontend with a Node.js and Express.js backend, 
                     │    MongoDB Atlas    │
                     │      Database       │
                     └─────────────────────┘
+                    ```
 
 
 ---
-
 ## 📂 Project Structure
 
 ```text
@@ -333,9 +333,6 @@ https://ai-warehouse-frontend.onrender.com
 
 ![AI Demand Prediction](screenshots/prediction.png)
 
-### 👨‍💼 Admin Panel
-
-Screenshot will be added.
 
 ---
 
