@@ -9,6 +9,9 @@ node_modules/
 # React build
 build/
 
+warehouse-frontend/node_modules/
+warehouse-frontend/build/
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
