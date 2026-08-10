@@ -121,69 +121,84 @@ The project combines a React.js frontend with a Node.js and Express.js backend, 
 
 ## 🏗️ System Architecture
 
-User
-  |
-  v
-React.js Frontend
-(Render)
-  |
-  | REST API
-  v
-Node.js + Express.js Backend
-(Render)
-  |
-  +------------------+
-  |                  |
-  v                  v
-MongoDB Atlas     Python AI
-Database          Prediction
-                    
+```text
+                    ┌─────────────────────┐
+                    │       User          │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   React Frontend    │
+                    │      (Render)       │
+                    └──────────┬──────────┘
+                               │
+                            REST API
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Node.js + Express   │
+                    │      Backend        │
+                    │      (Render)       │
+                    └──────┬─────────┬────┘
+                           │         │
+                           │         ▼
+                           │   ┌──────────────┐
+                           │   │ Python AI    │
+                           │   │ Prediction   │
+                           │   └──────────────┘
+                           │
+                           ▼
+                    ┌─────────────────────┐
+                    │    MongoDB Atlas    │
+                    │      Database       │
+                    └─────────────────────┘
 
----
+
+                    ---
 
 ## 📂 Project Structure
 
 AI_Warehouse_System/
-|
-|-- ai/
-|   |-- demandPrediction.js
-|   |-- predict.py
-|
-|-- config/
-|   |-- db.js
-|
-|-- controllers/
-|   |-- authController.js
-|   |-- productController.js
-|
-|-- models/
-|   |-- Expense.js
-|   |-- Inventory.js
-|   |-- Prediction.js
-|   |-- Product.js
-|   |-- StockHistory.js
-|   |-- User.js
-|
-|-- routes/
-|   |-- authRoutes.js
-|   |-- expenseRoutes.js
-|   |-- inventoryRoutes.js
-|   |-- predictionRoutes.js
-|   |-- productRoutes.js
-|
-|-- warehouse-frontend/
-|   |-- public/
-|   |-- src/
-|       |-- components/
-|       |-- pages/
-|   |-- package.json
-|   |-- package-lock.json
-|
-|-- server.js
-|-- package.json
-|-- package-lock.json
-|-- .gitignore
-|-- README.md
+│
+├── ai/
+│   ├── demandPrediction.js
+│   └── predict.py
+│
+├── config/
+│   └── db.js
+│
+├── controllers/
+│   ├── authController.js
+│   └── productController.js
+│
+├── models/
+│   ├── Expense.js
+│   ├── Inventory.js
+│   ├── Prediction.js
+│   ├── Product.js
+│   ├── StockHistory.js
+│   └── User.js
+│
+├── routes/
+│   ├── authRoutes.js
+│   ├── expenseRoutes.js
+│   ├── inventoryRoutes.js
+│   ├── predictionRoutes.js
+│   └── productRoutes.js
+│
+├── warehouse-frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   └── pages/
+│   ├── package.json
+│   └── package-lock.json
+│
+├── server.js
+├── package.json
+├── package-lock.json
+├── .gitignore
+└── README.md
 
 ---
 
