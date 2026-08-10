@@ -154,10 +154,11 @@ The project combines a React.js frontend with a Node.js and Express.js backend, 
                     └─────────────────────┘
 
 
-                    ---
+---
 
 ## 📂 Project Structure
 
+```text
 AI_Warehouse_System/
 │
 ├── ai/
@@ -304,27 +305,33 @@ https://ai-warehouse-frontend.onrender.com
 
 ## 📸 Screenshots
 
-Screenshots of the application will be added here.
+### 🔐 Login
 
-### 🔐 Login / Registration
+![Login](screenshots/Login.png)
 
-Screenshot will be added.
+### 📝 Registration
+
+![Registration](screenshots/Register.png)
+
+### 👨‍💼 Admin Panel
+
+![Admin Panel](screenshots/admin-panel.png)
 
 ### 📊 Dashboard
 
-Screenshot will be added.
+![Dashboard](screenshots/dashboard.png)
 
 ### 📦 Inventory Management
 
-Screenshot will be added.
+![Inventory Management](screenshots/inventory.png)
 
 ### 💰 Expense Management
 
-Screenshot will be added.
+![Expense Management](screenshots/expense.png)
 
 ### 🤖 AI Demand Prediction
 
-Screenshot will be added.
+![AI Demand Prediction](screenshots/prediction.png)
 
 ### 👨‍💼 Admin Panel
 
